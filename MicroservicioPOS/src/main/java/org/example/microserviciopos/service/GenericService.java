@@ -1,5 +1,6 @@
 package org.example.microserviciopos.service;
 
+import jakarta.transaction.Transactional;
 import org.example.microserviciopos.model.EntityBase;
 import org.springframework.data.jpa.repository.JpaRepository;
 
@@ -27,5 +28,22 @@ public abstract class GenericService <E extends EntityBase,R extends JpaReposito
     }
 
     public void delete(UUID id) {repository.deleteById(id);}
+
+    //"Borrar una entidad, pero solo cambiando el estado de activo a inactivo"
+    @Transactional
+    public void softDelete (UUID id){
+        E entity = findById(id);
+        entity.setActivo(false);
+        repository.save(entity);
+        repository.flush();
+    }
+
+    @Transactional
+    public void reactivar (UUID id){
+        E entity = findById(id);
+        entity.setActivo(true);
+        repository.save(entity);
+        repository.flush();
+    }
 }
 

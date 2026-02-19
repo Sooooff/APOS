@@ -1,5 +1,6 @@
 package org.example.microserviciopos.service;
 
+import jakarta.transaction.Transactional;
 import org.example.microserviciopos.model.Cliente;
 import org.springframework.stereotype.Service;
 import org.example.microserviciopos.repository.RepositoryCliente;
@@ -8,4 +9,5 @@ import org.example.microserviciopos.repository.RepositoryCliente;
 public class ServicioCliente extends GenericService<Cliente,RepositoryCliente> {
 
   protected ServicioCliente(RepositoryCliente repository) {super(repository);}
+
 }

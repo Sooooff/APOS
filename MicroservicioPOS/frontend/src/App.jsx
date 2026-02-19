@@ -1,9 +1,12 @@
 import './App.css'
-import ClienteCrud from './ClienteCrud'
+import DashboardLayout from './DashboardLayout'
+import Contacts from './Contacts'
 
 function App() {
   return (
-    <ClienteCrud />
+    <DashboardLayout>
+      <Contacts />
+    </DashboardLayout>
   )
 }
 
