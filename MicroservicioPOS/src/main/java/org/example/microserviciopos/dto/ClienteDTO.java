@@ -8,6 +8,7 @@ public record ClienteDTO(
         String primerApellido,
         String segundoNombre,
         String segundoApellido,
-        String email
+        String email,
+        Boolean activo
 ) {
 }
