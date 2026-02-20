@@ -12,7 +12,7 @@ import lombok.Setter;
 @Setter
 public class Telefono extends EntityBase {
 
-    @Column(nullable = false)
+    @Column(name = "numero_telefono", nullable = false)
     private String numeroTelefono;
 
     @Column(nullable = false)
