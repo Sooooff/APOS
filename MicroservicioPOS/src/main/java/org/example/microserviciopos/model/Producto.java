@@ -24,4 +24,7 @@ public class Producto extends EntityBase{
     @Enumerated(EnumType.STRING)
     private UnidadMedida unidadMedida;
 
+    // TO DO - agregar categoria producto
+
+
 }

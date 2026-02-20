@@ -10,5 +10,8 @@ import lombok.Setter;
 @Table(name = "proveedor")
 @Getter
 @Setter
-public class Proveedor extends EntityBase{
+public class Proveedor extends Persona {
+
+    private  String Empresa;
+
 }
