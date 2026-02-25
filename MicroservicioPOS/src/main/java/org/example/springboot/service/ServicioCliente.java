@@ -22,7 +22,6 @@ public class ServicioCliente extends GenericService<Cliente,RepositoryCliente> {
     @Transactional
     public Cliente create(Cliente cliente) {
         Cliente guardado = clienteRepository.saveAndFlush(cliente);
-        // Recargar la entidad guardada para asegurar que las colecciones e IDs generados están inicializados
         return clienteRepository.findById(guardado.getId()).orElse(guardado);
     }
 }

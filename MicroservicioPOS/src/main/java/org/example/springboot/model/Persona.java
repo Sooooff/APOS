@@ -8,6 +8,7 @@ import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 @Entity
 @Getter
@@ -35,6 +36,7 @@ public abstract class Persona extends EntityBase{
     private List<Telefono> telefonos = new ArrayList<>();
 
     public void addTelefono(Telefono telefono) {
+
         telefonos.add(telefono);
         telefono.setPersona(this);
     }
